@@ -1,0 +1,198 @@
+/* General Styling */
+body, html {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  background-color: #f4f4f9;
+}
+
+h2 {
+  font-size: 2rem;
+  color: #2a6f97;
+  text-align: center;
+  padding: 20px;
+}
+
+/* App Container */
+.App {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Styling */
+.caption-search-form,
+.select,
+select {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+  max-width: 800px;
+}
+
+select, input[type="text"], button {
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+}
+
+select:hover, input[type="text"]:hover, button:hover {
+  border-color: #2a6f97;
+}
+
+button {
+  background-color: #2a6f97;
+  color: white;
+  cursor: pointer;
+  border: none;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+/* Filter Options */
+.filter-options {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px;
+}
+
+.filter-options label {
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.filter-options input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+/* List Styling */
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 1rem;
+}
+
+ul li {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+ul li:hover {
+  background-color: #f1f7fb;
+}
+
+.popup {
+  position: relative;
+  display: inline-block;
+}
+
+.popup .popuptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.popup:hover .popuptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 100%;
+  max-width: 700px;
+}
+
+
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 9999; /* Make sure the modal appears on top */
+}
+
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #fff;
+  font-size: 50px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  color: #ffffff;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.image-navigation button {
+  background: transparent;
+  border: none;
+  color: #333;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.image-navigation button:hover {
+  color: #2a6f97;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .App {
+    padding: 10px;
+  }
+  select, input[type="text"], button {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .filter-options {
+    flex-direction: column;
+    align-items: center;
+  }
+}
